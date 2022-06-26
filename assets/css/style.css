@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height:100%
+}
+
+.container {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);;
+    grid-template-rows: 70px auto 50px;
+    grid-template-areas:   "navbar"
+                           "main"
+                           "footer";
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-right: 20px;
+}
+
+.navbar ul li {
+    display: flex;
+    justify-content: space-between
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: darkgrey;
+    font-weight: bold;
+    
+    padding-left: 3px;
+    font-size: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main h1 {
+    color: darkgrey;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.main {
+    grid-area: main;
+    background-image: url(../img/Fotop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tituMain {
+    color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+.footer {
+    grid-area: footer;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.footer h5 {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:aliceblue;
+}
+.redes {
+    width: 70px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.redSocial {
+    margin-right: 5px;
+}
+
+.logo {
+    height: 35px;
+    display: flex;
+    justify-content:left
+    
+
+}
+
+
+.productos {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);;
+    grid-template-rows: 70px 80px auto auto auto auto auto auto auto auto 50px;
+    grid-template-areas:   "navbar"
+                           "tituPro"
+                           "usbopen"
+                           "usbopto"
+                           "pixel"
+                           "splitter4"
+                           "artnet"
+                           "dmx14"
+                           "dmx17"
+                           "dmx7"
+                           "footer";
+
+}
+
+.tituPro{
+    grid-area:tituPro;
+}
+
+.usbopen{
+    grid-area:usbopen;
+    background-color: aqua;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    }
+
+.usbopto{
+    grid-area:usbopto;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.pixel{
+    grid-area:pixel;
+    background-color:aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitter4{
+    grid-area:splitter4;
+    background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+.artnet{
+    grid-area:artnet;
+    background-color:beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dmx14 {
+    grid-area:dmx14;
+    background-color:blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dmx17 {
+    grid-area:dmx17;
+    background-color:burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dmx7 {
+    grid-area:dmx7;
+    background-color:chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oem {
+    grid-area:oem;
+    background-color:chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+.tituPro h1 {
+    color: aqua;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 50px;
+        text-align: center;
+}
+
+main mproduc{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+@media (min-width: 576px) {
+    .navbar ul li a {   
+        font-size: 12px;
+    }   
+    .logo {
+        height: 100%; 
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 70px 80px auto auto auto auto 50px;
+        grid-template-areas:   "navbar navbar"
+                               "tituPro tituPro"
+                               "usbopen usbopto"
+                               "pixel splitter4"
+                               "artnet dmx14"
+                               "dmx17 dmx7"
+                               "footer footer";
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .navbar ul li a {   
+        font-size: 14px;
+    }   
+    .logo {
+        height: 100%; 
+    }
+
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 70px 80px auto auto auto 50px;
+        grid-template-areas:   "navbar navbar navbar"
+                               "tituPro tituPro tituPro"
+                               "usbopen usbopto pixel "
+                               "splitter4 artnet dmx14"
+                               "dmx17 dmx7 ."
+                               "footer footer footer";
+    }
+
+}
+
